@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import {
   Auth,
   GoogleAuthProvider,
   signInWithPopup,
   signOut,
-  authState
+  user,
+  User
 } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 
@@ -12,10 +13,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  user$: Observable<any>;
+  private auth = inject(Auth);
+  user$: Observable<User | null>;
 
-  constructor(private auth: Auth) {
-    this.user$ = authState(this.auth);
+  constructor() {
+    this.user$ = user(this.auth);
   }
 
   loginWithGoogle() {
@@ -28,7 +30,7 @@ export class AuthService {
   }
 
   async getIdToken(): Promise<string | null> {
-    const user = this.auth.currentUser;
-    return user ? await user.getIdToken() : null;
+    const currentUser = this.auth.currentUser;
+    return currentUser ? await currentUser.getIdToken() : null;
   }
 }

@@ -1,0 +1,60 @@
+section {
+    background-color: #244d7c;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    color: white;
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            width: 80px;
+            object-fit: cover;
+            filter: contrast(1.2);
+        }
+    }
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-right: 10px;
+
+        .avatar-button {
+            width: 42px;
+            height: 42px;
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ffd207;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .menu-header {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+
+        p {
+            margin: 0;
+            color: #666;
+            font-size: 0.75rem;
+        }
+    }
+
+}
