@@ -1,0 +1,29 @@
+<section>
+    <div class="logo">
+        <img src="logo.png" alt="Reservame Logo">
+        <h2>ReservaMe</h2>
+    </div>
+    
+    <div class="profile-section">
+        <button mat-button style="color: white;">Explorar</button>
+        @if(!this.user){
+            <button mat-raised-button (click)="login()" style="background-color: #F4C456; color: #193252; font-weight: bold;;"> Iniciar Sesion </button>
+        }
+        @else {
+                <span class="username">{{ user.displayName }}</span>
+                <button mat-icon-button [matMenuTriggerFor]="userMenu" class="avatar-button">
+                    <img [src]="user.photoURL" alt="User" class="avatar">
+                </button>
+                <mat-menu #userMenu="matMenu" xPosition="before" class="custom-menu">
+                    <div class="title">  
+                        <span style="padding: 50px; text-align: center;"><strong>{{ user.displayName }}</strong></span>
+                    </div>
+                    <hr>
+                    <button mat-menu-item>Mi Perfil</button>
+                    <button mat-menu-item>Ajustes</button>
+                    <button mat-menu-item (click)="logout()">Cerrar Sesión</button>
+                </mat-menu>
+            
+        }
+    </div>
+</section>
