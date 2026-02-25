@@ -7,7 +7,7 @@
     <div class="profile-section">
         <button mat-button style="color: white;">Explorar</button>
         @if(!this.user){
-            <button mat-raised-button (click)="login()" style="background-color: #F4C456; color: #193252; font-weight: bold;;"> Iniciar Sesion </button>
+            <button mat-raised-button (click)="login()" class="secondary-button"> Iniciar Sesion </button>
         }
         @else {
                 <span class="username">{{ user.displayName }}</span>

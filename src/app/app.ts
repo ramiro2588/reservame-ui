@@ -5,6 +5,7 @@ import { Nav } from "./nav/nav";
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { Dashboard } from "./Components/dashboard/dashboard";
 
 const matImports = [
   MatButtonModule,
@@ -14,7 +15,7 @@ const matImports = [
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Nav, ...matImports],
+  imports: [RouterOutlet, Nav, ...matImports, Dashboard],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,11 +1,17 @@
 section {
-    background-color: #244d7c;
+    background-color: #000224;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 5px;
     color: white;
+
+    .secondary-button {
+        background-color: #F4C456;
+        color: #193252;
+        font-weight: bold;
+    }
 
     .logo {
         display: flex;
@@ -40,6 +46,7 @@ section {
             border-radius: 50%;
             border: 2px solid #ffd207;
             transition: transform 0.2s;
+
             &:hover {
                 transform: scale(1.05);
             }

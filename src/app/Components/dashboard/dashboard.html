@@ -1,0 +1,42 @@
+<section>
+    <article class="header">
+        <h1>Tu tiempo es valioso. Agenda en un Click.</h1>
+        <br><br>
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Ej. Barberia, Dentista...">
+                <button mat-icon-button matSuffix class="search-button">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </mat-form-field>
+        </form>
+        <div class="buttons">
+            <button mat-raised-button class="secondary-button"><mat-icon>content_cut</mat-icon>Peluquerias</button>
+            <button mat-raised-button class="secondary-button"><mat-icon>spa</mat-icon>Salud y Bienestar</button>
+            <button mat-raised-button class="secondary-button"><mat-icon>restaurant</mat-icon>Gastronomía y Eventos</button>
+            <button mat-raised-button class="secondary-button"><mat-icon>fitness_center</mat-icon>Deportes y Actividades</button>
+        </div>
+    </article>
+    <article class="list">
+        @for (c of companys; track $index) {
+            <div class="item">
+                <img src="{{c.img}}" alt="{{c.name}} Imagen" onerror="this.onerror=null; this.src='logo.png';">
+                <h2>{{c.name}}<span> ⭐{{c.rating}}</span></h2>
+                <span>📍{{c.location}}</span>
+                <p>{{c.description}}</p>
+                <button mat-raised-button>Ver Disponibilidad</button>
+            </div>
+        }
+    </article>
+    <br>
+    <article class="promotion">
+        <div class="join-us-section">
+            <h2>¡Únete a Nosotros!</h2>
+            <p>¿Tienes un negocio? Haz crecer tu empresa con nuestra plataforma</p>
+            <div class="join-buttons">
+                <button mat-raised-button color="primary">Registra tu Negocio</button>
+                <button mat-stroked-button class="secondary-button">Conoce más</button>
+            </div>
+        </div>
+    </article>
+</section>

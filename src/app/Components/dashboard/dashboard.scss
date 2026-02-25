@@ -1,0 +1,112 @@
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    .secondary-button {
+        background-color: #F4C456;
+        color: #193252;
+        font-weight: bold;
+    }
+
+    .header {
+        width: 100%;
+        padding: 100px 0px;
+        background: url('./../../../../public/header-bg.png');
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        h1{
+            line-height: 1.5;
+        }
+        mat-form-field {
+            max-width: 600px;
+            width: 80%;
+        }
+
+        .search-button{
+            background-color: #244d7c;
+            color: white;
+            margin: 0 10px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+    }
+
+    .list {
+        width: 90%;
+        color: black;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        .item {
+            margin: auto;
+            margin-top: 20px;
+            width: 350px;
+            height: 450px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            button{
+                background-color: #2a81f3;
+                color: white;
+                margin-top: auto;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .promotion {
+        width: 100%;
+        .join-us-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #244d7c 0%, #2a81f3 100%);
+            
+            h2 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 1.1rem;
+                margin-bottom: 30px;
+                opacity: 0.95;
+            }
+
+            .join-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+
+                button {
+                    padding: 12px 30px;
+                    font-weight: bold;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
