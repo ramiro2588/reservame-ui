@@ -1,23 +1,16 @@
 section {
-    background-color: #000224;
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
-    color: white;
-
-    .secondary-button {
-        background-color: #F4C456;
-        color: #193252;
-        font-weight: bold;
-    }
+    padding: 5px 10px;
+    color: black;
 
     .logo {
         display: flex;
         flex-direction: row;
         align-items: center;
-
         img {
             width: 80px;
             object-fit: cover;
@@ -30,7 +23,15 @@ section {
         align-items: center;
         gap: 10px;
         padding-right: 10px;
-
+        .secondary{
+            color: black;
+            font-weight: bold;
+        }
+        .primary{
+            background-color: black; 
+            color: white; 
+            font-weight: bold;
+        }
         .avatar-button {
             width: 42px;
             height: 42px;
@@ -44,7 +45,7 @@ section {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            border: 2px solid #ffd207;
+            border: 2px solid black;
             transition: transform 0.2s;
 
             &:hover {
