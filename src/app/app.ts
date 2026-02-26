@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Nav } from "./nav/nav";
 
@@ -17,7 +17,8 @@ const matImports = [
   selector: 'app-root',
   imports: [RouterOutlet, Nav, ...matImports, Dashboard],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  encapsulation: ViewEncapsulation.None
 })
 export class App {
 }
